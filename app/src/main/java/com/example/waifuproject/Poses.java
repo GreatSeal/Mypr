@@ -4,11 +4,16 @@ public class Poses {
 
     public int id;
 
-    public String name;
+    public String Japan;
 
-    public String description;
+    public String Russian;
 
     public String benefits;
 
     public String image;
+
+    @Override
+    public String toString() {
+        return Japan +  Russian;
+    }
 }

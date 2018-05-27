@@ -34,13 +34,12 @@ public class Word2_Activity extends AppCompatActivity {
             Log.e("poses list",posesArrayList.size()+"");
 
             for(int i=0;i<posesArrayList.size();i++){
-                Log.e(" category filter",posesArrayList.get(i).name+"");
+                Log.e(" category filter",posesArrayList.get(i).Japan+"");
             }
 
-            ArrayAdapter<String> wordAdapter = new ArrayAdapter<String>(this,
-                    android.R.layout.simple_list_item_1,(ArrayList)posesArrayList);
-            ListView lv = (ListView) findViewById(R.id.listView);
-            lv.setAdapter(wordAdapter);
+            ListView listView = findViewById(R.id.listView);
+            ArrayAdapter arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, posesArrayList);
+            listView.setAdapter(arrayAdapter);
 
         }
     }

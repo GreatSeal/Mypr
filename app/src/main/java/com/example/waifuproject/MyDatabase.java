@@ -33,8 +33,8 @@ public class MyDatabase extends SQLiteAssetHelper {
         while(cursor.moveToNext()){
             Poses questions=new Poses();
             questions.id=cursor.getInt(cursor.getColumnIndex(MyDatabase.ID));
-            questions.name=cursor.getString(cursor.getColumnIndex(MyDatabase.JAPAN));
-            questions.description=cursor.getString(cursor.getColumnIndex(MyDatabase.RUSSIAN));
+            questions.Japan=cursor.getString(cursor.getColumnIndex(MyDatabase.JAPAN));
+            questions.Russian=cursor.getString(cursor.getColumnIndex(MyDatabase.RUSSIAN));
             questionsArrayList.add(questions);
         }
         return questionsArrayList;
