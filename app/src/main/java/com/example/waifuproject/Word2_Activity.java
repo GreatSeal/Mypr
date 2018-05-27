@@ -3,6 +3,8 @@ package com.example.waifuproject;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
@@ -16,6 +18,15 @@ public class Word2_Activity extends AppCompatActivity {
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
+
+           /* ListView listView = (ListView)findViewById(R.id.listView);
+            final String[] Japan = new String[];
+
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
+                    android.R.layout.simple_list_item_1, Japan);
+            listView.setAdapter(adapter);
+*/
+
             myDatabase=new MyDatabase(Word2_Activity.this);
 
             posesArrayList=myDatabase.getPoses();
@@ -26,6 +37,10 @@ public class Word2_Activity extends AppCompatActivity {
                 Log.e(" category filter",posesArrayList.get(i).name+"");
             }
 
+            ArrayAdapter<String> wordAdapter = new ArrayAdapter<String>(this,
+                    android.R.layout.simple_list_item_1,(ArrayList)posesArrayList);
+            ListView lv = (ListView) findViewById(R.id.listView);
+            lv.setAdapter(wordAdapter);
 
         }
     }

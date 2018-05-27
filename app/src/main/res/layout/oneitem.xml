@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/Japan"
-        android:layout_width="168dp"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:id="@+id/textView2"
+        android:layout_width="109dp"
+        android:layout_height="54dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="28dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/Russian"
-        android:layout_width="196dp"
-        android:layout_height="wrap_content"
-
-        android:text="TextView" />
-
-</LinearLayout>
+        android:id="@+id/textView4"
+        android:layout_width="109dp"
+        android:layout_height="54dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="195dp"
+        tools:layout_editor_absoluteY="28dp"
+        tools:ignore="MissingConstraints" />
+</android.support.constraint.ConstraintLayout>
